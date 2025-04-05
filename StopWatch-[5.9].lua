@@ -89,8 +89,7 @@ current_count_direction				= "UP";
 count_orientation					= "NORMAL";
 timer_activation					= 1;
 timer_reset							= 0;
-debug_entry							= 0;
-debug_entry							= 0;
+debug_entry							= 1;
 add_limit_note_source_visible		= 0;
 sub_limit_note_source_visible		= 0;
 sources_loaded 						= 0;
@@ -466,7 +465,7 @@ end
 ]]
 local function pre_dump(input, visited)
     visited = visited or {}
-  
+
     if type(input) ~= "table" then
       return tostring(input)
     elseif visited[input] then
@@ -522,7 +521,7 @@ function debug_log( content )
 		return
 	end	
 	if debug_file == "" then
-		debug_file = create_debug_file( debug_file_name, content ) 
+		create_debug_file( debug_file_name, content ) 
 	else
 		update_debug_file( debug_file, content )
 	end	
@@ -539,16 +538,16 @@ end
 	returns:		
 ----------------------------------------------------------------------------------------------------------------------------------------
 ]]
-function create_debug_file( input_file_name, content )
+function create_debug_file( input_file_name, content, callback )
 	if disable_script then return; end;
-	content = content or string.format( "%s [%s]\n", "Debug Information", os.date("%Y-%m-%d_%H.%M.%S"))
+	content = tostring(debug_entry) .. ") " .. string.rep( " ", string.len(debug_entry) ) .. content or string.format( "%s [%s]\n", "Debug Information", os.date("%Y-%m-%d_%H.%M.%S"))
 	local file_name = string.format( "%s-%s[%s]%s", filename(), input_file_name, os.date("%Y-%m-%d_%H.%M.%S"), ".txt");
 	-- set output path as the script path by default
 	local script_path = script_path();
 	local output_path = script_path .. file_name;
 	-- if specified output path exists, then set this as the new output path
 	output_path = script_path .. file_name;
-	output_path = output_path:gsub( [[\]], "/" );	
+	output_path = output_path:gsub( [[\]], "/" );
 	log( "create_debug_file", output_path )
     -- Open file in write mode, this will create the file if it does not exist
     local file = io.open( output_path, "w" )
@@ -562,7 +561,12 @@ function create_debug_file( input_file_name, content )
         -- Print error message
         print("Failed to open file " .. file_name .. " for writing")
     end
-	return output_path;
+
+    debug_file = output_path
+
+    if callback then
+		callback()
+    end
 end
 --[[
 ----------------------------------------------------------------------------------------------------------------------------------------
@@ -1009,11 +1013,11 @@ if type( tbl ) ~= "table" or tbl == nil then return tbl end; -- if the input tab
 end
 --[[
 ----------------------------------------------------------------------------------------------------------------------------------------
-	Description:	A function named script_update will be called when settings are changed
+	Description:	
 	
 	Credit:			
 	Modified:		
-	function:		Called upon settings initialization and modification
+	function:		convert time string into seconds
 	type:			
 	input type: 	
 	returns:
@@ -3459,6 +3463,8 @@ end
 ----------------------------------------------------------------------------------------------------------------------------------------
 ]]
 function prep_presuf()
+    debug_log( 'prep_presuf() -- function variable names: ' )
+
 	if hasBrackets( text_prefix ) then
 		local text_prefix_cleaned = removeBrackets( text_prefix )
 		text_prefix_validated = ""
@@ -4436,6 +4442,7 @@ function update_timer_display( source_name, text )
 			end	
 			time_mark_check( "marker_a" );
 			time_mark_check( "marker_b" );
+			prep_presuf()
 			obs.obs_data_set_string( settings, "text", text );				
 		end	
 	end
@@ -4852,7 +4859,7 @@ local function reset_mili( )
 end
 --[[
 ----------------------------------------------------------------------------------------------------------------------------------------
-Description:		Called if the timer setting change and needsto be updated.
+Description:		Called if the timer setting change and needs to be updated.
 					default_seconds is used for source cycling
 					default_seconds: Default Seconds
 					the default timer state
@@ -4893,7 +4900,7 @@ local function update_timer_settings( set_to_default, new_settings ) -- optional
 	if timer_mode == 1 then
 		update_timer_display = true;
 		--[[
-			In case the mode is switched, alwasy start with a reset of the timer time
+			In case the mode is switched, always start with a reset of the timer time
 		]]
 		if timer_mode_changed or timer_reset == 2 then timer_value( 0 ) end;  -- value, update_settings
 		--[[
@@ -5116,7 +5123,7 @@ local function activate( activating )
 		set_split_text( split_source );
 	end
 	--[[
-		Pass the activating state to a globle
+		Pass the activating state to a global
 		variable, as this wil be used in other
 		instances.
 	]]
@@ -5260,7 +5267,7 @@ local function startpause( pressed, force_activate )
 	if not is_visible( timer_source ) then 
 		set_visible( timer_source, true );
 	end
-	
+
 	if timer_active then
 		activate( false );
 	else
@@ -6108,7 +6115,11 @@ end
 ]]
 local function reset( pressed )
     debug_log( 'reset(' .. pre_dump(pressed) .. ') -- function variable names:  pressed ' )
-	if not script_ready then return end
+
+	if not script_ready then 
+		debug_log( 'reset(' .. pre_dump(pressed) .. ') -- script not ready, return ' )
+		return 
+	end
 	reset_activated = true; -- notify timer settings a reset call is in process
 	--[[
 		For hotkeys: This is called on key down & key up. A bool check: 
@@ -6196,7 +6207,7 @@ local function reset( pressed )
 	]]
 	last_text = tostring( obs.os_gettime_ns() );
 	--[[
-		timer_mode: eiher
+		timer_mode: either
 		timer_active: either
 		define > set_to_default: (true) * User requested a reset, so we do not want to set the settings to default.
 		define > new_settings: not required here because we will use the global (ctx.propsSet)
@@ -9306,42 +9317,50 @@ end
 ----------------------------------------------------------------------------------------------------------------------------------------
 ]]	
 function script_update( settings )
-    debug_log( 'script_update(' .. pre_dump(settings) .. ') -- function variable names:  settings ' )
-	--[[
-		something changed, remove all timers. 
-	]]
-	remove_all_timers();
-	
-  	ctx.propsSet = settings;-- Keep track of current settings
-	
-	--[[
-		Update a gloabl in case something changed. 
-	]]
-	count_required_sources();
-	--[[
-		Get the correct frequency for splitseconds when the script loads. 
-	]]
-	assign_default_frequency();
-	--[[
-		load any property values available to globals
-	]]
-	load_settings_globals( settings ); -- load all property settings to globals
-	reset_mili( ); -- ensure mili hide/show settings are updated
-	
-	reset( true ); -- anything could have changed so reset everything
-	--[[
-		If setting changed, update timer
-	]]
-	update_timer_settings( false ); -- optional inputs: set_to_default(bool), new_settings(obs_property_data/obs_userdata)	
-	
-	hour_format = get_unit_allocation( custom_time_format, 'H' );
+    local function after_file_created()
+		debug_log( 'script_update sources ready (' .. pre_dump(status) .. ') ' )
+		obs.obs_data_set_bool( ctx.propsSet, "script_ready", true ); -- set to signal ready state
 
-	minute_format = get_unit_allocation( custom_time_format, 'M' );
-	--[[
-	 		Make sure the trigger is as accurate as possible depending
-			if the timer is counting up or down.
-	]]
-	timer_activation_signals()
+		--[[
+			something changed, remove all timers. 
+		]]
+		remove_all_timers();
+
+	  	ctx.propsSet = settings;-- Keep track of current settings
+		
+		--[[
+			Update a global in case something changed. 
+		]]
+		count_required_sources();
+		--[[
+			Get the correct frequency for splitseconds when the script loads. 
+		]]
+		assign_default_frequency();
+		--[[
+			load any property values available to globals
+		]]
+		load_settings_globals( settings ); -- load all property settings to globals
+
+		reset_mili( ); -- ensure mili hide/show settings are updated
+		
+		reset( true ); -- anything could have changed so reset everything
+		--[[
+			If setting changed, update timer
+		]]
+		update_timer_settings( false ); -- optional inputs: set_to_default(bool), new_settings(obs_property_data/obs_userdata)	
+		
+		hour_format = get_unit_allocation( custom_time_format, 'H' );
+
+		minute_format = get_unit_allocation( custom_time_format, 'M' );
+		--[[
+		 		Make sure the trigger is as accurate as possible depending
+				if the timer is counting up or down.
+		]]
+		timer_activation_signals()
+    end
+
+    content = 'script_update(' .. pre_dump(settings) .. ') -- function variable names:  settings '
+	create_debug_file( debug_file_name, content, after_file_created ) 
 end
 --[[
 ----------------------------------------------------------------------------------------------------------------------------------------
@@ -9835,7 +9854,7 @@ function on_event( event )
 	debug_log( 'on_event( ' .. pre_dump(event) .. ' ) -- function variable names: event' )
 	if event == obs.OBS_FRONTEND_EVENT_FINISHED_LOADING then
 		debug_log( 'Event: Finished Loading' )
-		init();	-- redudency
+		init();	-- redundancy
 		if not load_saved_time then
 			update_prop_settings_current_seconds( 0 ) -- update current time to last time in properties 
 		end	

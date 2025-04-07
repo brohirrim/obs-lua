@@ -245,12 +245,12 @@ hotkey_id_sec_sub_3					= obs.OBS_INVALID_HOTKEY_ID;
 ----------------------------------------------------------------------------------------------------------------------------------------
 
 	Description: Function to detect the operating system
-	Credit:
-	Modified:
-	function:
-	type:
-	input type:
-	returns:
+	Credit:			
+	Modified:		
+	function:		
+	type:			
+	input type: 	
+	returns:		
 ----------------------------------------------------------------------------------------------------------------------------------------
 ]]
 function detectOS()
@@ -265,12 +265,12 @@ end
 ----------------------------------------------------------------------------------------------------------------------------------------
 
 	Description: Assign OS type to variable
-	Credit:
-	Modified:
-	function:
-	type:
-	input type:
-	returns:
+	Credit:			
+	Modified:		
+	function:		
+	type:			
+	input type: 	
+	returns:		
 ----------------------------------------------------------------------------------------------------------------------------------------
 ]]
 osType = detectOS()
@@ -278,12 +278,12 @@ osType = detectOS()
 ----------------------------------------------------------------------------------------------------------------------------------------
 
 	Description: Compatibility Sequence Variable. Assign operating system specific variable
-	Credit:
-	Modified:
-	function:
-	type:
-	input type:
-	returns:
+	Credit:			
+	Modified:		
+	function:		
+	type:			
+	input type: 	
+	returns:		
 ----------------------------------------------------------------------------------------------------------------------------------------
 ]]
 if osType == "Windows" then
@@ -333,12 +333,12 @@ Deque.__index = Deque -- Set the __index of Deque to itself to allow method look
 	Description: This function creates a new Deque instance (i.e., an object)
 				 Constructor for creating a new instance of Deque
 				 Initializes an empty Deque with the first index at 0 and the last index at -1.
-	Credit:
-	Modified:
-	function:
-	type:
-	input type:
-	returns:
+	Credit:			
+	Modified:		
+	function:		
+	type:			
+	input type: 	
+	returns:		
 ----------------------------------------------------------------------------------------------------------------------------------------
 ]]
 function Deque.new()
@@ -359,12 +359,12 @@ media["used_note_source_marker_b"] = Deque.new()
 	Description: This method adds a value to the start (left) of the Deque
 				 Method to add a value to the front (left) of the Deque.
 
-	Credit:
-	Modified:
-	function:
-	type:
-	input type:
-	returns:
+	Credit:			
+	Modified:		
+	function:		
+	type:			
+	input type: 	
+	returns:		
 ----------------------------------------------------------------------------------------------------------------------------------------
 ]]
 function Deque:pushleft(value)
@@ -381,12 +381,12 @@ end
 	Description: This method removes a value from the end (right) of the Deque and returns it
 				 This method also returns the removed value.
 
-	Credit:
-	Modified:
-	function:
-	type:
-	input type:
-	returns:
+	Credit:			
+	Modified:		
+	function:		
+	type:			
+	input type: 	
+	returns:		
 ----------------------------------------------------------------------------------------------------------------------------------------
 ]]
 function Deque:popright()
@@ -406,14 +406,14 @@ end
 --[[
 ----------------------------------------------------------------------------------------------------------------------------------------
 
-	Description:
+	Description:	
 
-	Credit:
-	Modified:
-	function:
-	type:
-	input type:
-	returns:
+	Credit:			
+	Modified:		
+	function:		
+	type:			
+	input type: 	
+	returns:		
 ----------------------------------------------------------------------------------------------------------------------------------------
 ]]
 
@@ -441,7 +441,7 @@ end
 	Description: Get the name of this script
 
 	Credit:			midnight-studios, et al
-	Modified:
+	Modified:		
 	function:		regular expression
 	type:			Support
 	input type: 	string
@@ -458,7 +458,7 @@ end
 
 	Credit:			et al
 	Modified:		yes
-	function:
+	function:		
 	type:			Support (debug tool)
 	input type: 	variable
 	returns:		string
@@ -490,7 +490,7 @@ local function pre_dump(input, visited)
 
 	Credit:			et al
 	Modified:		No
-	function:
+	function:		
 	type:			Support (debug tool)
 	input type: 	string
 	returns:		print(string)
@@ -506,14 +506,14 @@ local function log( name, msg )
 end
 --[[
 ----------------------------------------------------------------------------------------------------------------------------------------
-	Description:
+	Description:		
 
-	Credit:
-	Modified:
-	function:
-	type:
-	input type:
-	returns:
+	Credit:			
+	Modified:		
+	function:		
+	type:			
+	input type: 	
+	returns:		
 ----------------------------------------------------------------------------------------------------------------------------------------
 ]]
 function debug_log( content )
@@ -529,14 +529,14 @@ function debug_log( content )
 end
 --[[
 ----------------------------------------------------------------------------------------------------------------------------------------
-	Description:
+	Description:		
 
-	Credit:
-	Modified:
-	function:
-	type:
-	input type:
-	returns:
+	Credit:			
+	Modified:		
+	function:		
+	type:			
+	input type: 	
+	returns:		
 ----------------------------------------------------------------------------------------------------------------------------------------
 ]]
 function create_debug_file( input_file_name, content )
@@ -566,14 +566,14 @@ function create_debug_file( input_file_name, content )
 end
 --[[
 ----------------------------------------------------------------------------------------------------------------------------------------
-	Description:
+	Description:		
 
-	Credit:
-	Modified:
-	function:
-	type:
-	input type:
-	returns:
+	Credit:			
+	Modified:		
+	function:		
+	type:			
+	input type: 	
+	returns:		
 ----------------------------------------------------------------------------------------------------------------------------------------
 ]]
 function rewrite_line_debug_file( filename, line_num, content )
@@ -624,14 +624,14 @@ function rewrite_line_debug_file( filename, line_num, content )
 end
 --[[
 ----------------------------------------------------------------------------------------------------------------------------------------
-	Description:
+	Description:		
 
-	Credit:
-	Modified:
-	function:
-	type:
-	input type:
-	returns:
+	Credit:			
+	Modified:		
+	function:		
+	type:			
+	input type: 	
+	returns:		
 ----------------------------------------------------------------------------------------------------------------------------------------
 ]]
 function update_debug_file( filename, content )
@@ -663,9 +663,9 @@ end
 					the beginning or end of a unit of data. That which delimits, that separates.
 
 	Credit:			midnight-studios, et al
-	Modified:
+	Modified:		
 	function:		breaks string into sections by a reference that is returned in a table
-	type:
+	type:			
 	input type: 	string, delimiter
 	returns:		table
 ----------------------------------------------------------------------------------------------------------------------------------------
@@ -694,9 +694,9 @@ end
 					the beginning or end of a unit of data. That which delimits, that separates.
 
 	Credit:			midnight-studios, et al
-	Modified:
+	Modified:		
 	function:		breaks string into sections by a reference that is returned in a table
-	type:
+	type:			
 	input type: 	string, delimiter
 	returns:		table
 ----------------------------------------------------------------------------------------------------------------------------------------
@@ -764,14 +764,14 @@ local function pairsByKeys( tbl, input_function )
 end
 --[[
 ----------------------------------------------------------------------------------------------------------------------------------------
-	Description:
+	Description:	
 
-	Credit:
-	Modified:
-	function:
-	type:
-	input type:
-	returns:
+	Credit:			
+	Modified:		
+	function:		
+	type:			
+	input type: 	
+	returns:		
 ----------------------------------------------------------------------------------------------------------------------------------------
 ]]
 function reverseTable( tbl )
@@ -793,14 +793,14 @@ function reverseTable( tbl )
 end
 --[[
 ----------------------------------------------------------------------------------------------------------------------------------------
-	Description:
+	Description:	
 
-	Credit:
-	Modified:
-	function:
-	type:
-	input type:
-	returns:
+	Credit:			
+	Modified:		
+	function:		
+	type:			
+	input type: 	
+	returns:		
 ----------------------------------------------------------------------------------------------------------------------------------------
 ]]
 function getTableBase( tbl )
@@ -816,14 +816,14 @@ function getTableBase( tbl )
 end
 --[[
 ----------------------------------------------------------------------------------------------------------------------------------------
-	Description:
+	Description:	
 
-	Credit:
-	Modified:
-	function:
-	type:
-	input type:
-	returns:
+	Credit:			
+	Modified:		
+	function:		
+	type:			
+	input type: 	
+	returns:		
 ----------------------------------------------------------------------------------------------------------------------------------------
 ]]
 function tableHasValue( table )
@@ -906,12 +906,12 @@ end
 				https://obsproject.com/docs/reference-sources.html?highlight=media_started
 				attach event listener callback [source_signal]: Called when media has ended.
 
-	Credit:
-	Modified:
-	function:
-	type:
-	input type:
-	returns:
+	Credit:			
+	Modified:		
+	function:		
+	type:			
+	input type:		 	
+	returns:		
 ----------------------------------------------------------
 ]]
 function connectSignalHandler( source, signal, callback )
@@ -942,14 +942,14 @@ function connectSignalHandler( source, signal, callback )
 end
 --[[
 ----------------------------------------------------------
-	Description:
+	Description:	
 
-	Credit:
-	Modified:
-	function:
-	type:
-	input type:
-	returns:
+	Credit:			
+	Modified:		
+	function:		
+	type:			
+	input type:		 	
+	returns:		
 ----------------------------------------------------------
 ]]
 function refresh_properties()
@@ -958,13 +958,13 @@ function refresh_properties()
 end
 --[[
 ----------------------------------------------------------------------------------------------------------------------------------------
-	Description:
+	Description:	
 
-	Credit:
-	Modified:
-	function:
-	type:
-	input type:
+	Credit:			
+	Modified:		
+	function:		
+	type:			
+	input type: 	
 	returns:
 ----------------------------------------------------------------------------------------------------------------------------------------
 ]]
@@ -982,13 +982,13 @@ function checkTimeString( str )
 end
 --[[
 ----------------------------------------------------------------------------------------------------------------------------------------
-	Description:
+	Description:	
 
-	Credit:
-	Modified:
-	function:
-	type:
-	input type:
+	Credit:			
+	Modified:		
+	function:		
+	type:			
+	input type: 	
 	returns:
 ----------------------------------------------------------------------------------------------------------------------------------------
 ]]
@@ -1009,13 +1009,13 @@ if type( tbl ) ~= "table" or tbl == nil then return tbl end; -- if the input tab
 end
 --[[
 ----------------------------------------------------------------------------------------------------------------------------------------
-	Description:
+	Description:	
 
-	Credit:
-	Modified:
+	Credit:			
+	Modified:		
 	function:		convert time string into seconds
-	type:
-	input type:
+	type:			
+	input type: 	
 	returns:
 ----------------------------------------------------------------------------------------------------------------------------------------
 ]]
@@ -1035,13 +1035,13 @@ function convertToSeconds(timeString)
 end
 --[[
 ----------------------------------------------------------------------------------------------------------------------------------------
-	Description:
+	Description: 	
 
-	Credit:
-	Modified:
-	function:
-	type:
-	input type:
+	Credit:			
+	Modified:		
+	function:		
+	type:			
+	input type: 	
 	returns:
 ----------------------------------------------------------------------------------------------------------------------------------------
 ]]
@@ -1056,13 +1056,13 @@ function get_source_type_by_name( source_name )
 end
 --[[
 ----------------------------------------------------------------------------------------------------------------------------------------
-	Description:
+	Description: 	
 
-	Credit:
-	Modified:
-	function:
-	type:
-	input type:
+	Credit:			
+	Modified:		
+	function:		
+	type:			
+	input type: 	
 	returns:
 ----------------------------------------------------------------------------------------------------------------------------------------
 ]]
@@ -1081,11 +1081,11 @@ end
 					If the provided source name exists, find any children
 					sources. This applies to groups or scenes.
 
-	Credit:
-	Modified:
-	function:
-	type:
-	input type:
+	Credit:			
+	Modified:		
+	function:		
+	type:			
+	input type: 	
 	returns:
 ----------------------------------------------------------------------------------------------------------------------------------------
 ]]
@@ -1201,14 +1201,14 @@ function list_source_children_by_source_name( source_name, filter_unversioned_id
 end
 --[[
 ----------------------------------------------------------------------------------------------------------------------------------------
-	Description:
+	Description:	
 
-	Credit:
-	Modified:
-	function:
-	type:
-	input type:
-	returns:
+	Credit:			
+	Modified:		
+	function:		
+	type:			
+	input type: 	
+	returns:		
 ----------------------------------------------------------------------------------------------------------------------------------------
 ]]
 function frontend_get_current_scene()
@@ -1226,14 +1226,14 @@ function frontend_get_current_scene()
 end
 --[[
 ----------------------------------------------------------------------------------------------------------------------------------------
-	Description:
+	Description:	
 
-	Credit:
-	Modified:
-	function:
-	type:
-	input type:
-	returns:
+	Credit:			
+	Modified:		
+	function:		
+	type:			
+	input type: 	
+	returns:		
 ----------------------------------------------------------------------------------------------------------------------------------------
 ]]
 function frontend_set_current_scene( scene_name )
@@ -1250,10 +1250,10 @@ end
 	Description:	set source visibility
 
 	Credit:			midnight-studios, et al
-	Modified:
+	Modified:		
 	function:		Update Text Source
 	type:			Support, Render
-	input type:
+	input type: 	
 	returns:		bool
 ----------------------------------------------------------------------------------------------------------------------------------------
 ]]
@@ -1300,9 +1300,9 @@ end
 	Description:	check source visibility
 
 	Credit:			midnight-studios, et al
-	Modified:
+	Modified:		
 	function:		Check source visibility state by name
-	type:
+	type:			
 	input type: 	source name (string)
 	returns:		boolean
 ----------------------------------------------------------
@@ -1337,11 +1337,11 @@ end
 ----------------------------------------------------------------------------------------------------------------------------------------
 	Description:	Function to compare two time strings
 
-	Credit:
-	Modified:
-	function:
-	type:
-	input type:
+	Credit:			
+	Modified:		
+	function:		
+	type:			
+	input type: 	
 	returns:
 ----------------------------------------------------------------------------------------------------------------------------------------
 ]]
@@ -1370,11 +1370,11 @@ end
 ----------------------------------------------------------------------------------------------------------------------------------------
 	Description:	Function to sort the table items
 
-	Credit:
-	Modified:
-	function:
-	type:
-	input type:
+	Credit:			
+	Modified:		
+	function:		
+	type:			
+	input type: 	
 	returns:
 ----------------------------------------------------------------------------------------------------------------------------------------
 ]]
@@ -1390,11 +1390,11 @@ end
 	Description:	custom function
 					we use this to get a count of essential sources
 
-	Credit:
-	Modified:
-	function:
-	type:
-	input type:
+	Credit:			
+	Modified:		
+	function:		
+	type:			
+	input type: 	
 	returns:	interger
 ----------------------------------------------------------------------------------------------------------------------------------------
 ]]
@@ -1418,13 +1418,13 @@ local function count_required_sources()
 end
 --[[
 ----------------------------------------------------------------------------------------------------------------------------------------
-	Description:
+	Description:	
 
-	Credit:
-	Modified:
-	function:
-	type:
-	input type:
+	Credit:			
+	Modified:		
+	function:		
+	type:			
+	input type: 	
 	returns:
 ----------------------------------------------------------------------------------------------------------------------------------------
 ]]
@@ -1449,13 +1449,13 @@ function getNextItemMatchingTime( tbl, currentTime )
 end
 --[[
 ----------------------------------------------------------------------------------------------------------------------------------------
-	Description:
+	Description:	
 
-	Credit:
-	Modified:
-	function:
-	type:
-	input type:
+	Credit:			
+	Modified:		
+	function:		
+	type:			
+	input type: 	
 	returns:
 ----------------------------------------------------------------------------------------------------------------------------------------
 ]]
@@ -1483,7 +1483,7 @@ end
 	Description:	Grab OBS data array and return in a table
 
 	Credit:			midnight-studios
-	Modified:
+	Modified:		
 	function:		data array to table
 	type:			Support
 	input type: 	Settings, property reference
@@ -1514,13 +1514,13 @@ local function obs_data_array_to_table( set, item )
 end
 --[[
 ----------------------------------------------------------------------------------------------------------------------------------------
-	Description:
+	Description:	
 
-	Credit:
-	Modified:
-	function:
-	type:
-	input type:
+	Credit:			
+	Modified:		
+	function:		
+	type:			
+	input type: 	
 	returns:
 ----------------------------------------------------------------------------------------------------------------------------------------
 ]]
@@ -1565,10 +1565,10 @@ end
 ----------------------------------------------------------------------------------------------------------------------------------------
 	Description:	Function to cycle through a table list containing strings
 
-	Credit:
-	Modified:
-	function:
-	type:
+	Credit:			
+	Modified:		
+	function:		
+	type:			
 	input type: 	string
 	returns:		nothing
 ----------------------------------------------------------------------------------------------------------------------------------------
@@ -1598,10 +1598,10 @@ end
 ----------------------------------------------------------------------------------------------------------------------------------------
 	Description:	Check source type of media if the media is set to loop
 					The source is referenced by name.
-	Credit:
-	Modified:
-	function:
-	type:
+	Credit:			
+	Modified:		
+	function:		
+	type:			
 	input type: 	reference (string)
 	returns:		bool
 ----------------------------------------------------------------------------------------------------------------------------------------
@@ -1638,16 +1638,16 @@ local function is_valid_type_source( source_name, unversioned_id )
 end
 --[[
 ----------------------------------------------------------------------------------------------------------------------------------------
-	Description:
+	Description:	
 
 	editable_list_has_values( property_name ) -- text_arr_marker_a text_arr_marker_b audio_marker_a_arr audio_marker_b_arr
 
-	Credit:
-	Modified:
-	function:
-	type:
-	input type:
-	returns:
+	Credit:			
+	Modified:		
+	function:		
+	type:			
+	input type: 	
+	returns:		
 ----------------------------------------------------------------------------------------------------------------------------------------
 ]]
 function editable_list_has_values( property_name )
@@ -1657,14 +1657,14 @@ function editable_list_has_values( property_name )
 end
 --[[
 ----------------------------------------------------------------------------------------------------------------------------------------
-	Description:
+	Description:	
 
-	Credit:
-	Modified:
-	function:
-	type:
-	input type:
-	returns:
+	Credit:			
+	Modified:		
+	function:		
+	type:			
+	input type: 	
+	returns:		
 ----------------------------------------------------------------------------------------------------------------------------------------
 ]]
 function reset_group_note_sources( group_source_name )
@@ -1684,10 +1684,10 @@ end
 					two different types of lists. This function utilizes one String Type variable: 'ref'.
 					The variable 'ref' indicates the location where the function is applied.
 
-	Credit:
-	Modified:
-	function:
-	type:
+	Credit:			
+	Modified:		
+	function:		
+	type:			
 	input type: 	string
 	returns:		nothing
 ----------------------------------------------------------------------------------------------------------------------------------------
@@ -1785,10 +1785,10 @@ end
 					it into a table format that is assigned to the variable 'data_list', which is then used within the function for
 					further processing.
 
-	Credit:
-	Modified:
-	function:
-	type:
+	Credit:			
+	Modified:		
+	function:		
+	type:			
 	input type: 	string
 	returns:		nothing
 ----------------------------------------------------------------------------------------------------------------------------------------
@@ -1850,10 +1850,10 @@ end
 ----------------------------------------------------------------------------------------------------------------------------------------
 	Description:	Function to cycle through a table list containing strings
 
-	Credit:
-	Modified:
-	function:
-	type:
+	Credit:			
+	Modified:		
+	function:		
+	type:			
 	input type: 	string
 	returns:		nothing
 ----------------------------------------------------------------------------------------------------------------------------------------
@@ -1871,12 +1871,12 @@ local function reset_audio_source_visibility( property_name, ref )
 end
 --[[
 ----------------------------------------------------------------------------------------------------------------------------------------
-	Description:
-	Credit:
-	Modified:
-	function:
-	type:
-	input type:
+	Description:	 
+	Credit:			
+	Modified:		
+	function:		
+	type:			
+	input type: 	
 	returns:
 ----------------------------------------------------------------------------------------------------------------------------------------
 ]]
@@ -1895,11 +1895,11 @@ end
 ----------------------------------------------------------------------------------------------------------------------------------------
 	Description:	This function asigns a variable to a global
 
-	Credit:
-	Modified:
-	function:
-	type:
-	input type:
+	Credit:			
+	Modified:		
+	function:		
+	type:			
+	input type: 	
 	returns:
 ----------------------------------------------------------------------------------------------------------------------------------------
 ]]
@@ -1911,13 +1911,13 @@ function update_time_markers( currentTime )
 end
 --[[
 ----------------------------------------------------------------------------------------------------------------------------------------
-	Description:
+	Description:	
 
-	Credit:
-	Modified:
-	function:
-	type:
-	input type:
+	Credit:			
+	Modified:		
+	function:		
+	type:			
+	input type: 	
 	returns:
 ----------------------------------------------------------------------------------------------------------------------------------------
 ]]
@@ -1950,12 +1950,12 @@ end
 ----------------------------------------------------------
 	Description:	Check if a source is a child of a group
 
-	Credit:
-	Modified:
-	function:
-	type:
-	input type:
-	returns:
+	Credit:				
+	Modified:		
+	function:		
+	type:						
+	input type: 	
+	returns:		
 ----------------------------------------------------------
 ]]
 
@@ -2088,7 +2088,7 @@ end
 	Modified:		midnight-studios, et al
 	function:		Used to list files with target extension
 	type:			directory path, file extension
-	input type:
+	input type: 	
 	returns:		table
 ----------------------------------------------------------------------------------------------------------------------------------------
 ]]
@@ -2122,7 +2122,7 @@ end
 
 	Credit:			midnight-studios, et al
 	Modified:		Yes, custom params to suit targeted need
-	function:
+	function:		
 	type:			Support
 	input type: 	OBS data (Settings)
 	returns:		json file
@@ -2153,7 +2153,7 @@ end
 
 	Credit:			midnight-studios, et al
 	Modified:		Yes, custom params to suit targeted need
-	function:
+	function:		
 	type:			Support
 	input type: 	OBS data (Settings)
 	returns:		json file
@@ -2202,7 +2202,7 @@ end
 					video_info.colorspace
 
 	Credit:			midnight-studios
-	Modified:
+	Modified:		
 	function:		Get obs user defined video frame rate
 	type:			Support
 	input type: 	none
@@ -2233,9 +2233,9 @@ end
 					$function status: in service
 
 	Credit:			midnight-studios
-	Modified:
+	Modified:		
 	function:		Dependency / Support
-	type:
+	type:			
 	input type: 	4 variables - "HH" "MM" "SS" "FF"
 	returns:		formatted time string: time stamp 00:00:00,00 (HH:MM:SS,FF)
 ----------------------------------------------------------------------------------------------------------------------------------------
@@ -2285,10 +2285,10 @@ end
 					"output" is updated with the result of calling config_time with hour, minutes, seconds, and miliseconds.
 					Return "output".
 
-	Credit:
-	Modified:
-	function:
-	type:
+	Credit:			
+	Modified:		
+	function:		
+	type:			
 	input type: 	Double (Seconds / Split Seconds)
 	returns:		time stamp 00:00:00,00 (HH:MM:SS,FF)
 ----------------------------------------------------------------------------------------------------------------------------------------
@@ -2378,7 +2378,7 @@ end
 					uses start and end time stamps to get a value
 
 	Credit:			midnight-studios
-	Modified:
+	Modified:		
 	function:		calculate time difference between two points in time
 	type:			Support
 	input type: 	none
@@ -2407,7 +2407,7 @@ end
 					fastest cycle supported in OBS lua.
 
 	Credit:			midnight-studios
-	Modified:
+	Modified:		
 	function:		determine the correct fraction of the split second based on frame rate
 	type:			Support
 	input type: 	double
@@ -2425,14 +2425,14 @@ local function get_frequency( previous )
 end
 --[[
 ----------------------------------------------------------------------------------------------------------------------------------------
-	Description:
+	Description:	
 
 	Credit:			midnight-studios
-	Modified:
-	function:
-	type:
-	input type:
-	returns:
+	Modified:		
+	function:		
+	type:			
+	input type: 	
+	returns:		
 ----------------------------------------------------------------------------------------------------------------------------------------
 ]]
 function timer_remove( input )
@@ -2458,14 +2458,14 @@ function timer_remove( input )
 end
 --[[
 ----------------------------------------------------------------------------------------------------------------------------------------
-	Description:
+	Description:	
 
 	Credit:			midnight-studios
-	Modified:
-	function:
-	type:
-	input type:
-	returns:
+	Modified:		
+	function:		
+	type:			
+	input type: 	
+	returns:		
 ----------------------------------------------------------------------------------------------------------------------------------------
 ]]
 function timer_add( input, ms )
@@ -2474,14 +2474,14 @@ function timer_add( input, ms )
 end
 --[[
 ----------------------------------------------------------------------------------------------------------------------------------------
-	Description:
+	Description:	
 
 	Credit:			midnight-studios
-	Modified:
-	function:
-	type:
-	input type:
-	returns:
+	Modified:		
+	function:		
+	type:			
+	input type: 	
+	returns:		
 ----------------------------------------------------------------------------------------------------------------------------------------
 ]]
 function remove_all_timers()
@@ -2505,13 +2505,13 @@ end
 	Description:	This was developed because some tasks were not completing
 
 	Credit:			midnight-studios
-	Modified:
+	Modified:		
 
 	function:		delayed recording task to allow other tasks to complete
-	type:
-	input type:
+	type:			
+	input type: 	
 
-	returns:
+	returns:		
 ----------------------------------------------------------------------------------------------------------------------------------------
 ]]
 local function frontend_recording_start_callback( )
@@ -2533,9 +2533,9 @@ end
 
 
 	Credit:			midnight-studios
-	Modified:
+	Modified:		
 	function:		Start obs call obs_frontend_recording_start()
-	type:
+	type:			
 	input type: 	reference, milliseconds
 	returns:		none
 ----------------------------------------------------------------------------------------------------------------------------------------
@@ -2568,9 +2568,9 @@ end
 
 
 	Credit:			midnight-studios
-	Modified:
+	Modified:		
 	function:		convert date, hour, minutes and secods to seconds
-	type:
+	type:			
 	input type: 	interger for date, time
 	returns:		interger (seconds)
 ----------------------------------------------------------------------------------------------------------------------------------------
@@ -2600,10 +2600,10 @@ end
 					define a custom format.
 					$function status: in service
 
-	Credit:
+	Credit:			
 	Modified:		midnight-studios
 	function:		The timestamp is what we put in, the format is what we want this little princess to be transformed into
-	type:
+	type:			
 	input type: 	00:00:00,00
 	returns:		Whatever the format incleded: $T $D $H $M $S $F and anything inbetween
 ----------------------------------------------------------------------------------------------------------------------------------------
@@ -2665,13 +2665,13 @@ local function format_time( timestamp, format )
 end
 --[[
 ----------------------------------------------------------------------------------------------------------------------------------------
-	Description:
+	Description:	
 
-	Credit:
-	Modified:
-	function:
-	type:
-	input type:
+	Credit:			
+	Modified:		
+	function:		
+	type:			
+	input type: 	
 	returns:
 ----------------------------------------------------------------------------------------------------------------------------------------
 ]]
@@ -2695,12 +2695,12 @@ end
 					If the string meets these conditions, the function returns any value string in the brackets
 
 
-	Credit:
-	Modified:
-	function:
-	type:
-	input type:
-	returns:
+	Credit:			
+	Modified:		
+	function:		
+	type:			
+	input type: 	
+	returns:		
 ----------------------------------------------------------------------------------------------------------------------------------------
 ]]
 function extract_from_brackets( str, reg )
@@ -2732,7 +2732,7 @@ end
 					{M90} will assign a 90 minute value
 					Note, the M90 must be inside brackets to be considered.
 
-	Credit:
+	Credit:			
 	Modified:		Asking if miliseconds property must be shown or hidden and this is for back end UI
 	function:		yer, no
 	type:			Support, UI
@@ -2779,11 +2779,11 @@ end
 					and if param1 is set to 2 to it will pull time markers entries from the list for Marker B.
 					If param1 is defined with a time marker matching the format HH:MM:SS it will use this time marker instead.
 
-	Credit:
-	Modified:
+	Credit:			
+	Modified:		
 	function:		accepts  string, string
-	type:
-	input type:
+	type:			
+	input type: 	
 	returns:		3 variable [boolean, String, Interger] true or false if input contains a match to the pattern, param 1, param 2
 ----------------------------------------------------------------------------------------------------------------------------------------
 ]]
@@ -2829,9 +2829,9 @@ end
 --[[
 ----------------------------------------------------------------------------------------------------------------------------------------
 
-	Description:
-	Credit:
-	Modified:
+	Description:	
+	Credit:			
+	Modified:		
 	function:		yer, no
 	type:			Support, UI
 	input type: 	properties, settings
@@ -2851,7 +2851,7 @@ end
 					If a pair of braces is found, the function uses string.sub to extract the substrings of str before and
 					after the pair of braces, concatenates them using the .. operator, and returns the result.
 
-	Credit:
+	Credit:			
 	Modified:		Asking if miliseconds property must be shown or hidden and this is for back end UI
 	function:		yer, no
 	type:			Support, UI
@@ -2869,11 +2869,11 @@ function removeBrackets( str )
 end
 --[[
 ----------------------------------------------------------------------------------------------------------------------------------------
-	Description:
+	Description:	
 
 	Credit:			et al
-	Modified:
-	function:
+	Modified:		
+	function:				
 	type:			Support, Render
 	input type: 	Integer
 	returns:		none
@@ -2919,7 +2919,7 @@ end
 	Description:	Change color of font for text source
 
 	Credit:			et al
-	Modified:
+	Modified:		
 	function:		Update Text Source (timer text source)
 	type:			Support, Render
 	input type: 	Integer
@@ -2952,11 +2952,11 @@ end
 ----------------------------------------------------------------------------------------------------------------------------------------
 	Description:	Add timer here so we have a global setting
 
-	Credit:
-	Modified:
-	function:
-	type:
-	input type:
+	Credit:			
+	Modified:		
+	function:		
+	type:			
+	input type: 	
 	returns:
 ----------------------------------------------------------------------------------------------------------------------------------------
 ]]
@@ -2969,11 +2969,11 @@ end
 ----------------------------------------------------------------------------------------------------------------------------------------
 	Description:	Remove timer here so we have a global setting
 
-	Credit:
-	Modified:
-	function:
-	type:
-	input type:
+	Credit:			
+	Modified:		
+	function:		
+	type:			
+	input type: 	
 	returns:
 ----------------------------------------------------------------------------------------------------------------------------------------
 ]]
@@ -2985,11 +2985,11 @@ end
 ----------------------------------------------------------------------------------------------------------------------------------------
 	Description:	Add timer here so we have a global setting
 
-	Credit:
-	Modified:
-	function:
-	type:
-	input type:
+	Credit:			
+	Modified:		
+	function:		
+	type:			
+	input type: 	
 	returns:
 ----------------------------------------------------------------------------------------------------------------------------------------
 ]]
@@ -3002,11 +3002,11 @@ end
 ----------------------------------------------------------------------------------------------------------------------------------------
 	Description:	Remove timer here so we have a global setting
 
-	Credit:
-	Modified:
-	function:
-	type:
-	input type:
+	Credit:			
+	Modified:		
+	function:		
+	type:			
+	input type: 	
 	returns:
 ----------------------------------------------------------------------------------------------------------------------------------------
 ]]
@@ -3018,11 +3018,11 @@ end
 ----------------------------------------------------------------------------------------------------------------------------------------
 	Description:	Add timer here so we have a global setting
 
-	Credit:
-	Modified:
-	function:
-	type:
-	input type:
+	Credit:			
+	Modified:		
+	function:		
+	type:			
+	input type: 	
 	returns:
 ----------------------------------------------------------------------------------------------------------------------------------------
 ]]
@@ -3041,11 +3041,11 @@ end
 ----------------------------------------------------------------------------------------------------------------------------------------
 	Description:	Remove timer here so we have a global setting
 
-	Credit:
-	Modified:
-	function:
-	type:
-	input type:
+	Credit:			
+	Modified:		
+	function:		
+	type:			
+	input type: 	
 	returns:
 ----------------------------------------------------------------------------------------------------------------------------------------
 ]]
@@ -3057,11 +3057,11 @@ end
 ----------------------------------------------------------------------------------------------------------------------------------------
 	Description:	Add timer here so we have a global setting
 
-	Credit:
-	Modified:
-	function:
-	type:
-	input type:
+	Credit:			
+	Modified:		
+	function:		
+	type:			
+	input type: 	
 	returns:
 ----------------------------------------------------------------------------------------------------------------------------------------
 ]]
@@ -3080,11 +3080,11 @@ end
 ----------------------------------------------------------------------------------------------------------------------------------------
 	Description:	Remove timer here so we have a global setting
 
-	Credit:
-	Modified:
-	function:
-	type:
-	input type:
+	Credit:			
+	Modified:		
+	function:		
+	type:			
+	input type: 	
 	returns:
 ----------------------------------------------------------------------------------------------------------------------------------------
 ]]
@@ -3096,11 +3096,11 @@ end
 ----------------------------------------------------------------------------------------------------------------------------------------
 	Description:	Add timer here so we have a global setting
 
-	Credit:
-	Modified:
-	function:
-	type:
-	input type:
+	Credit:			
+	Modified:		
+	function:		
+	type:			
+	input type: 	
 	returns:
 ----------------------------------------------------------------------------------------------------------------------------------------
 ]]
@@ -3121,11 +3121,11 @@ end
 ----------------------------------------------------------------------------------------------------------------------------------------
 	Description:	Add timer here so we have a global setting
 
-	Credit:
-	Modified:
-	function:
-	type:
-	input type:
+	Credit:			
+	Modified:		
+	function:		
+	type:			
+	input type: 	
 	returns:
 ----------------------------------------------------------------------------------------------------------------------------------------
 ]]
@@ -3151,7 +3151,7 @@ end
 					some criteria. In this case, show or hide the field
 					"Toggle Milliseconds" only when required.
 
-	Credit:
+	Credit:			
 	Modified:		Asking if miliseconds property must be shown or hidden and this is for back end UI
 	function:		yer, no
 	type:			Support, UI
@@ -3179,7 +3179,7 @@ end
 	Description:	Function to set the source text
 
 	Credit:			et al
-	Modified:
+	Modified:		
 	function:		Update Text Source
 	type:			Support, Render
 	input type: 	target source by name, contents to be added to text contents
@@ -3210,10 +3210,10 @@ end
 ----------------------------------------------------------------------------------------------------------------------------------------
 	Description:	Set source visibility to hidden
 
-	Credit:
-	Modified:
+	Credit:			
+	Modified:		
 	function:		a callback for a timer used to set a source visibility to hidden
-	type:
+	type:			
 	input type: 	none
 	returns:		none
 ----------------------------------------------------------------------------------------------------------------------------------------
@@ -3227,10 +3227,10 @@ end
 ----------------------------------------------------------------------------------------------------------------------------------------
 	Description:	Set source visibility to hidden
 
-	Credit:
-	Modified:
+	Credit:			
+	Modified:		
 	function:		a callback for a timer used to set a source visibility to hidden
-	type:
+	type:			
 	input type: 	none
 	returns:		none
 ----------------------------------------------------------------------------------------------------------------------------------------
@@ -3242,13 +3242,13 @@ local function marker_b_media_end_callback( )
 end
 --[[
 ----------------------------------------------------------------------------------------------------------------------------------------
-	Description:
+	Description:	
 
-	Credit:
-	Modified:
-	function:
-	type:
-	input type:
+	Credit:			
+	Modified:		
+	function:		
+	type:			
+	input type: 	
 	returns:
 ----------------------------------------------------------------------------------------------------------------------------------------
 ]]
@@ -3275,11 +3275,11 @@ local function signal_media_ended( cd )
 end
 --[[
 ----------------------------------------------------------------------------------------------------------------------------------------
-	Description:
+	Description:	
 
 	Credit:			OBS, Source Signals, https://obsproject.com/docs/reference-sources.html?highlight=media_ended
-	Modified:
-	function:
+	Modified:		
+	function:		
 	type:			Support
 	input type: 	ref
 	returns:		signal_media_ended
@@ -3317,13 +3317,13 @@ local function disconnect_after_media_end( ref )
 end
 --[[
 ----------------------------------------------------------------------------------------------------------------------------------------
-	Description:
+	Description:	
 
-	Credit:
-	Modified:
-	function:
-	type:
-	input type:
+	Credit:			
+	Modified:		
+	function:		
+	type:			
+	input type: 	
 	returns:
 ----------------------------------------------------------------------------------------------------------------------------------------
 ]]
@@ -3352,13 +3352,13 @@ local function start_media_action( source_name, ref )
 end
 --[[
 ----------------------------------------------------------------------------------------------------------------------------------------
-	Description:
+	Description:	
 
-	Credit:
-	Modified:
-	function:
-	type:
-	input type:
+	Credit:			
+	Modified:		
+	function:		
+	type:			
+	input type: 	
 	returns:
 ----------------------------------------------------------------------------------------------------------------------------------------
 ]]
@@ -3371,10 +3371,10 @@ end
 	Description:	Change color of font for text source
 
 	Credit:			et al
-	Modified:
+	Modified:		
 	function:		Update Text Source
 	type:			Support, Render
-	input type:
+	input type: 	
 	returns:		none
 ----------------------------------------------------------------------------------------------------------------------------------------
 ]]
@@ -3422,14 +3422,14 @@ local function set_text_note_color( ref )
 end
 --[[
 ----------------------------------------------------------------------------------------------------------------------------------------
-	Description:
+	Description:	
 
-	Credit:
-	Modified:
-	function:
-	type:
-	input type:
-	returns:
+	Credit:			
+	Modified:		
+	function:		
+	type:			
+	input type: 	
+	returns:		
 ----------------------------------------------------------------------------------------------------------------------------------------
 ]]
 function roundSeconds()
@@ -3448,14 +3448,14 @@ function roundSeconds()
 end
 --[[
 ----------------------------------------------------------------------------------------------------------------------------------------
-	Description:
+	Description:	
 
-	Credit:
-	Modified:
-	function:
-	type:
-	input type:
-	returns:
+	Credit:			
+	Modified:		
+	function:		
+	type:			
+	input type: 	
+	returns:		
 ----------------------------------------------------------------------------------------------------------------------------------------
 ]]
 function prep_presuf()
@@ -3476,12 +3476,12 @@ end
 ----------------------------------------------------------------------------------------------------------------------------------------
 	Description:	validate instructions
 
-	Credit:
-	Modified:
-	function:
-	type:
-	input type:
-	returns:
+	Credit:			
+	Modified:		
+	function:		
+	type:			
+	input type: 	
+	returns:		
 ----------------------------------------------------------------------------------------------------------------------------------------
 ]]
 local function validate_presuf()
@@ -3575,14 +3575,14 @@ local function validate_presuf()
 end
 --[[
 ----------------------------------------------------------------------------------------------------------------------------------------
-	Description:
+	Description:	
 
-	Credit:
-	Modified:
-	function:
-	type:
-	input type:
-	returns:
+	Credit:			
+	Modified:		
+	function:		
+	type:			
+	input type: 	
+	returns:		
 ----------------------------------------------------------------------------------------------------------------------------------------
 ]]
 local function time_mark_check( ref )
@@ -3716,10 +3716,10 @@ end
 ----------------------------------------------------------------------------------------------------------------------------------------
 	Description:	Check source type of media if the media is set to loop
 					The source is referenced by name.
-	Credit:
-	Modified:
-	function:
-	type:
+	Credit:			
+	Modified:		
+	function:		
+	type:			
 	input type: 	reference (string)
 	returns:		bool
 ----------------------------------------------------------------------------------------------------------------------------------------
@@ -3755,9 +3755,9 @@ end
 	Description:	Check if the source state changed,
 					if so, set source visble = false
 
-	Credit:
-	Modified:
-	function:
+	Credit:			
+	Modified:		
+	function:		
 	type:			tasks
 	input type: 	ref (string)
 	returns:		none
@@ -3834,10 +3834,10 @@ end
 	Description:	Stop Media Playback
 
 	Credit:			OBS, midnight-studios
-	Modified:
-	function:
-	type:
-	input type:
+	Modified:		
+	function:		
+	type:			
+	input type: 	
 	returns:	none
 ----------------------------------------------------------------------------------------------------------------------------------------
 ]]
@@ -3866,10 +3866,10 @@ end
 	Description:	Play / Pause Media
 
 	Credit:			OBS, midnight-studios
-	Modified:
-	function:
-	type:
-	input type:
+	Modified:		
+	function:		
+	type:			
+	input type: 	
 	returns:	none, play /pause media source
 ----------------------------------------------------------------------------------------------------------------------------------------
 ]]
@@ -3903,11 +3903,11 @@ end
 					ended, or if it is looped, then end the media after a
 					defined time.
 
-	Credit:
-	Modified:
-	function:
-	type:
-	input type:
+	Credit:			
+	Modified:		
+	function:		
+	type:			
+	input type: 	
 	returns:
 ----------------------------------------------------------------------------------------------------------------------------------------
 ]]
@@ -3937,11 +3937,11 @@ end
 					ended, or if it is looped, then end the media after a
 					defined time.
 
-	Credit:
-	Modified:
-	function:
-	type:
-	input type:
+	Credit:			
+	Modified:		
+	function:		
+	type:			
+	input type: 	
 	returns:
 ----------------------------------------------------------------------------------------------------------------------------------------
 ]]
@@ -3958,10 +3958,10 @@ end
 ----------------------------------------------------------------------------------------------------------------------------------------
 	Description:	Function to cycle through a list for sources or scenes
 
-	Credit:
-	Modified:
-	function:
-	type:
+	Credit:			
+	Modified:		
+	function:		
+	type:			
 	input type: 	string
 	returns:		nothing
 ----------------------------------------------------------------------------------------------------------------------------------------
@@ -4010,10 +4010,10 @@ end
 ----------------------------------------------------------------------------------------------------------------------------------------
 	Description:	Function to cycle through a list for sources or scenes
 
-	Credit:
-	Modified:
-	function:
-	type:
+	Credit:			
+	Modified:		
+	function:		
+	type:			
 	input type: 	string
 	returns:		nothing
 ----------------------------------------------------------------------------------------------------------------------------------------
@@ -4057,10 +4057,10 @@ end
 ----------------------------------------------------------------------------------------------------------------------------------------
 	Description:	Function to cycle through a list for sources or scenes
 
-	Credit:
-	Modified:
-	function:
-	type:
+	Credit:			
+	Modified:		
+	function:		
+	type:			
 	input type: 	string
 	returns:		nothing
 ----------------------------------------------------------------------------------------------------------------------------------------
@@ -4092,10 +4092,10 @@ end
 ----------------------------------------------------------------------------------------------------------------------------------------
 	Description:	Function to cycle through a list for sources or scenes
 
-	Credit:
-	Modified:
-	function:
-	type:
+	Credit:			
+	Modified:		
+	function:		
+	type:			
 	input type: 	string
 	returns:		nothing
 ----------------------------------------------------------------------------------------------------------------------------------------
@@ -4128,10 +4128,10 @@ end
 ----------------------------------------------------------------------------------------------------------------------------------------
 	Description:	Function to cycle through a list for sources or scenes
 
-	Credit:
-	Modified:
-	function:
-	type:
+	Credit:			
+	Modified:		
+	function:		
+	type:			
 	input type: 	string
 	returns:		nothing
 ----------------------------------------------------------------------------------------------------------------------------------------
@@ -4201,7 +4201,7 @@ end
 
 
 	Credit:			midnight-studios, et al
-	Modified:
+	Modified:		
 	function:		check true or false
 	type:			Dependency / Support
 	input type: 	string, string
@@ -4244,7 +4244,7 @@ end
 	Description:	Called when a scene is activated/deactivated
 
 	Credit:			midnight-studios, et al
-	Modified:
+	Modified:		
 	function:		make a source visible
 	type:			Dependency / Support
 	input type: 	source, bool, timer_activation (global), scene_name_has_source_name()
@@ -4273,11 +4273,11 @@ end
 ----------------------------------------------------------------------------------------------------------------------------------------
 	Description:	Update Properties
 
-	Credit:
-	Modified:
-	function:
-	type:
-	input type:
+	Credit:			
+	Modified:		
+	function:		
+	type:			
+	input type: 	
 	returns:
 ----------------------------------------------------------------------------------------------------------------------------------------
 ]]
@@ -4306,11 +4306,11 @@ end
 ----------------------------------------------------------------------------------------------------------------------------------------
 	Description:	Update Properties
 
-	Credit:
-	Modified:
-	function:
-	type:
-	input type:
+	Credit:			
+	Modified:		
+	function:		
+	type:			
+	input type: 	
 	returns:
 ----------------------------------------------------------------------------------------------------------------------------------------
 ]]
@@ -4340,8 +4340,8 @@ end
 	Description:	Everytime the timer value is updated,
 					it will happen here
 
-	Credit:
-	Modified:
+	Credit:			
+	Modified:		
 	function:		update the timer value
 	type:			Dependency / Support
 	input type: 	double
@@ -4360,11 +4360,11 @@ end
 	Description:	Assign the correct frequency value to the timer incriment
 					depending on if timer is counting up or down
 
-	Credit:
-	Modified:
+	Credit:			
+	Modified:		
 	function:		update the timer value
 	type:			Dependency / Support
-	input type:
+	input type: 	
 	returns:		calls timer_value()
 ----------------------------------------------------------------------------------------------------------------------------------------
 ]]
@@ -4401,11 +4401,11 @@ end
 ----------------------------------------------------------------------------------------------------------------------------------------
 	Description:	Function to set the defined time text source value
 
-	Credit:
-	Modified:
-	function:
-	type:
-	input type:
+	Credit:			
+	Modified:		
+	function:		
+	type:			
+	input type: 	
 	returns:
 ----------------------------------------------------------------------------------------------------------------------------------------
 ]]
@@ -4447,10 +4447,10 @@ end
 ----------------------------------------------------------------------------------------------------------------------------------------
 	Description:	Function to toggle milliseconds
 
-	Credit:
-	Modified:
+	Credit:			
+	Modified:		
 	function:		mili_toggle
-	type:
+	type:			
 	input type: 	globals: toggle_mili_trigger, timer_mode, mili_toggle_triggered, raw_time()
 	returns:		none
 ----------------------------------------------------------------------------------------------------------------------------------------
@@ -4484,11 +4484,11 @@ end
 ----------------------------------------------------------------------------------------------------------------------------------------
 	Description:	Function to set the defined time text source value
 
-	Credit:
-	Modified:
-	function:
-	type:
-	input type:
+	Credit:			
+	Modified:		
+	function:		
+	type:			
+	input type: 	
 	returns:
 ----------------------------------------------------------------------------------------------------------------------------------------
 ]]
@@ -4634,8 +4634,8 @@ end
 					The text source only permits linebreaks ( "\n" ) this
 					limitation affects how the data can be formated  ):
 
-	Credit:
-	Modified:
+	Credit:			
+	Modified:		
 	function:		split time
 	type:			Dependency / Support
 	input type: 	globals
@@ -4696,8 +4696,8 @@ end
 ----------------------------------------------------------------------------------------------------------------------------------------
 	Description:	Decide if current_seconds needs to reset to default_seconds
 
-	Credit:
-	Modified:
+	Credit:			
+	Modified:		
 	function:		Check if current_seconds needs to reset to default_seconds
 	type:			check
 	input type: 	timer_expire_event
@@ -4715,11 +4715,11 @@ end
 ----------------------------------------------------------------------------------------------------------------------------------------
 	Description:	Function to set the split time text
 
-	Credit:
-	Modified:
-	function:
-	type:
-	input type:
+	Credit:			
+	Modified:		
+	function:		
+	type:			
+	input type: 	
 	returns:
 ----------------------------------------------------------------------------------------------------------------------------------------
 ]]
@@ -4742,11 +4742,11 @@ end
 
 	Description:	Used when we need to set some globals for the timer to default state
 
-	Credit:
-	Modified:
-	function:
-	type:
-	input type:
+	Credit:			
+	Modified:		
+	function:		
+	type:			
+	input type: 	
 	returns:
 ----------------------------------------------------------------------------------------------------------------------------------------
 ]]
@@ -4822,12 +4822,12 @@ local function default_timer_globals( set_to_default )
 end
 --[[
 ----------------------------------------------------------------------------------------------------------------------------------------
-	Description:
+	Description:	
 
-	Credit:
-	Modified:
-	function:
-	type:
+	Credit:			
+	Modified:		
+	function:		
+	type:			
 	input type: 	toggle_mili_trigger, set_time_text, timer_mode
 	returns:		show_mili (bool)
 ----------------------------------------------------------------------------------------------------------------------------------------
@@ -4863,11 +4863,11 @@ Description:		Called if the timer setting change and needs to be updated.
 					from default_seconds for another function such as source cycling.
 					Every instance that a timer time is defined, we must record it to default_seconds
 
-	Credit:
-	Modified:
-	function:
-	type:
-	input type:
+	Credit:			
+	Modified:		
+	function:		
+	type:			
+	input type: 	
 	returns:
 ----------------------------------------------------------------------------------------------------------------------------------------
 ]]
@@ -5029,11 +5029,11 @@ end
 
 	Description:	Add timer here so we have a global setting
 
-	Credit:
-	Modified:
-	function:
-	type:
-	input type:
+	Credit:			
+	Modified:		
+	function:		
+	type:			
+	input type: 	
 	returns:
 ----------------------------------------------------------------------------------------------------------------------------------------
 ]]
@@ -5053,11 +5053,11 @@ end
 ----------------------------------------------------------------------------------------------------------------------------------------
 	Description:	Remove timer here so we have a global setting
 
-	Credit:
-	Modified:
-	function:
-	type:
-	input type:
+	Credit:			
+	Modified:		
+	function:		
+	type:			
+	input type: 	
 	returns:
 ----------------------------------------------------------------------------------------------------------------------------------------
 ]]
@@ -5070,11 +5070,11 @@ end
 ----------------------------------------------------------------------------------------------------------------------------------------
 	Description:	Add timer here so we have a global setting
 
-	Credit:
-	Modified:
-	function:
-	type:
-	input type:
+	Credit:			
+	Modified:		
+	function:		
+	type:			
+	input type: 	
 	returns:
 ----------------------------------------------------------------------------------------------------------------------------------------
 ]]
@@ -5087,13 +5087,13 @@ local function start_timer()
 end
 --[[
 ----------------------------------------------------------------------------------------------------------------------------------------
-	Description:
+	Description:	
 
-	Credit:
-	Modified:
-	function:
-	type:
-	input type:
+	Credit:			
+	Modified:		
+	function:		
+	type:			
+	input type: 	
 	returns:
 ----------------------------------------------------------------------------------------------------------------------------------------
 ]]
@@ -5182,11 +5182,11 @@ end
 ----------------------------------------------------------------------------------------------------------------------------------------
 	Description:	Usually called by a button or hotkey press
 
-	Credit:
-	Modified:
-	function:
-	type:
-	input type:
+	Credit:			
+	Modified:		
+	function:		
+	type:			
+	input type: 	
 	returns:
 ----------------------------------------------------------------------------------------------------------------------------------------
 ]]
@@ -5211,11 +5211,11 @@ end
 ----------------------------------------------------------------------------------------------------------------------------------------
 	Description:	Usually called by a button or hotkey press
 
-	Credit:
-	Modified:
-	function:
-	type:
-	input type:
+	Credit:			
+	Modified:		
+	function:		
+	type:			
+	input type: 	
 	returns:
 ----------------------------------------------------------------------------------------------------------------------------------------
 ]]
@@ -5240,11 +5240,11 @@ end
 ----------------------------------------------------------------------------------------------------------------------------------------
 	Description:	Usually called by a button or hotkey press
 
-	Credit:
-	Modified:
-	function:
-	type:
-	input type:
+	Credit:			
+	Modified:		
+	function:		
+	type:			
+	input type: 	
 	returns:
 ----------------------------------------------------------------------------------------------------------------------------------------
 ]]
@@ -5274,20 +5274,20 @@ local function startpause( pressed, force_activate )
 end
 --[[
 ----------------------------------------------------------------------------------------------------------------------------------------
-	Description:
+	Description:	
 
-	Credit:
-	Modified:
+	Credit:			
+	Modified:		
 	function:		reset timer
-	type:
-	input type:
+	type:			
+	input type: 	
 	returns:		none
 ----------------------------------------------------------------------------------------------------------------------------------------
 ]]
 local function hotkey_send_start( pressed )
     debug_log( 'hotkey_send_start(' .. pre_dump(pressed) .. ') -- function variable names:  pressed ' )
 	--[[
-		For hotkeys: This is called on key down & key up. A bool check:
+		For hotkeys: This is called on key down & key up. A bool check: 
 
 		pressed = true (key down)
 		pressed = false (key up)
@@ -5309,20 +5309,20 @@ local function hotkey_send_start( pressed )
 end
 --[[
 ----------------------------------------------------------------------------------------------------------------------------------------
-	Description:
+	Description:	
 
-	Credit:
-	Modified:
+	Credit:			
+	Modified:		
 	function:		reset timer
-	type:
-	input type:
+	type:			
+	input type: 	
 	returns:		none
 ----------------------------------------------------------------------------------------------------------------------------------------
 ]]
 local function hotkey_send_pause( pressed )
     debug_log( 'hotkey_send_pause(' .. pre_dump(pressed) .. ') -- function variable names:  pressed ' )
 	--[[
-		For hotkeys: This is called on key down & key up. A bool check:
+		For hotkeys: This is called on key down & key up. A bool check: 
 
 		pressed = true (key down)
 		pressed = false (key up)
@@ -5342,8 +5342,8 @@ end
 ----------------------------------------------------------------------------------------------------------------------------------------
 	Description:	Take the values from the properties and assign it to the timer
 
-	Credit:
-	Modified:
+	Credit:			
+	Modified:		
 	function:		Used to manually set stopwatch
 	type:			Dependency / Support
 	input type: 	none
@@ -5373,7 +5373,7 @@ end
 					unless the year is also evenly divisible by 400
 
 	Credit:			et al
-	Modified:
+	Modified:		
 	function:		A leap year is a year with 366 days instead of 365
 	type:			Dependency / Support, UI
 	input type: 	integer
@@ -5412,11 +5412,11 @@ end
 ----------------------------------------------------------------------------------------------------------------------------------------
 	Description:	Callback for button press
 
-	Credit:
-	Modified:
-	function:
-	type:
-	input type:
+	Credit:			
+	Modified:		
+	function:		
+	type:			
+	input type: 	
 	returns:
 ----------------------------------------------------------------------------------------------------------------------------------------
 ]]
@@ -5459,13 +5459,13 @@ local function direction_button_clicked( props, p, settings )
 end
 --[[
 ----------------------------------------------------------------------------------------------------------------------------------------
-	Description:
+	Description:	
 
-	Credit:
-	Modified:
-	function:
-	type:
-	input type:
+	Credit:			
+	Modified:		
+	function:		
+	type:			
+	input type: 	
 	returns:
 ----------------------------------------------------------------------------------------------------------------------------------------
 ]]
@@ -5508,13 +5508,13 @@ function update_timer_direction( pressed )
 end
 --[[
 ----------------------------------------------------------------------------------------------------------------------------------------
-	Description:
+	Description:	
 
-	Credit:
-	Modified:
-	function:
-	type:
-	input type:
+	Credit:			
+	Modified:		
+	function:		
+	type:			
+	input type: 	
 	returns:
 ----------------------------------------------------------------------------------------------------------------------------------------
 ]]
@@ -5559,20 +5559,20 @@ function mili( pressed )
 end
 --[[
 ----------------------------------------------------------------------------------------------------------------------------------------
-	Description:
+	Description:	
 
-	Credit:
-	Modified:
-	function:
-	type:
-	input type:
+	Credit:			
+	Modified:		
+	function:		
+	type:			
+	input type: 	
 	returns:		none
 ----------------------------------------------------------------------------------------------------------------------------------------
 ]]
 local function hotkey_send_mili( pressed )
     debug_log( 'hotkey_send_mili(' .. pre_dump(pressed) .. ') -- function variable names:  pressed ' )
 	--[[
-		For hotkeys: This is called on key down & key up. A bool check:
+		For hotkeys: This is called on key down & key up. A bool check: 
 
 		pressed = true (key down)
 		pressed = false (key up)
@@ -5590,20 +5590,20 @@ local function hotkey_send_mili( pressed )
 end
 --[[
 ----------------------------------------------------------------------------------------------------------------------------------------
-	Description:
+	Description:	
 
-	Credit:
-	Modified:
-	function:
-	type:
-	input type:
+	Credit:			
+	Modified:		
+	function:		
+	type:			
+	input type: 	
 	returns:		none
 ----------------------------------------------------------------------------------------------------------------------------------------
 ]]
 local function hotkey_send_direction( pressed )
     debug_log( 'hotkey_send_direction(' .. pre_dump(pressed) .. ') -- function variable names:  pressed ' )
 	--[[
-		For hotkeys: This is called on key down & key up. A bool check:
+		For hotkeys: This is called on key down & key up. A bool check: 
 
 		pressed = true (key down)
 		pressed = false (key up)
@@ -5623,13 +5623,13 @@ local function hotkey_send_direction( pressed )
 end
 --[[
 ----------------------------------------------------------------------------------------------------------------------------------------
-	Description:
+	Description:	
 
-	Credit:
-	Modified:
-	function:
-	type:
-	input type:
+	Credit:			
+	Modified:		
+	function:		
+	type:			
+	input type: 	
 	returns:		none
 ----------------------------------------------------------------------------------------------------------------------------------------
 ]]
@@ -5642,13 +5642,13 @@ function sal_timer_callback()
 end
 --[[
 ----------------------------------------------------------------------------------------------------------------------------------------
-	Description:
+	Description:	
 
-	Credit:
-	Modified:
-	function:
-	type:
-	input type:
+	Credit:			
+	Modified:		
+	function:		
+	type:			
+	input type: 	
 	returns:		none
 ----------------------------------------------------------------------------------------------------------------------------------------
 ]]
@@ -5663,13 +5663,13 @@ function start_sal_timer()
 end
 --[[
 ----------------------------------------------------------------------------------------------------------------------------------------
-	Description:
+	Description:	
 
-	Credit:
-	Modified:
-	function:
-	type:
-	input type:
+	Credit:			
+	Modified:		
+	function:		
+	type:			
+	input type: 	
 	returns:		none
 ----------------------------------------------------------------------------------------------------------------------------------------
 ]]
@@ -5686,13 +5686,13 @@ local function sal_check( )
 end
 --[[
 ----------------------------------------------------------------------------------------------------------------------------------------
-	Description:
+	Description:	
 
-	Credit:
-	Modified:
-	function:
-	type:
-	input type:
+	Credit:			
+	Modified:		
+	function:		
+	type:			
+	input type: 	
 	returns:		none
 ----------------------------------------------------------------------------------------------------------------------------------------
 ]]
@@ -5713,13 +5713,13 @@ local function sec_add_1_update( )
 end
 --[[
 ----------------------------------------------------------------------------------------------------------------------------------------
-	Description:
+	Description:	
 
-	Credit:
-	Modified:
-	function:
-	type:
-	input type:
+	Credit:			
+	Modified:		
+	function:		
+	type:			
+	input type: 	
 	returns:		none
 ----------------------------------------------------------------------------------------------------------------------------------------
 ]]
@@ -5740,13 +5740,13 @@ local function sec_add_2_update( )
 end
 --[[
 ----------------------------------------------------------------------------------------------------------------------------------------
-	Description:
+	Description:	
 
-	Credit:
-	Modified:
-	function:
-	type:
-	input type:
+	Credit:			
+	Modified:		
+	function:		
+	type:			
+	input type: 	
 	returns:		none
 ----------------------------------------------------------------------------------------------------------------------------------------
 ]]
@@ -5767,13 +5767,13 @@ local function sec_add_3_update( )
 end
 --[[
 ----------------------------------------------------------------------------------------------------------------------------------------
-	Description:
+	Description:	
 
-	Credit:
-	Modified:
-	function:
-	type:
-	input type:
+	Credit:			
+	Modified:		
+	function:		
+	type:			
+	input type: 	
 	returns:		none
 ----------------------------------------------------------------------------------------------------------------------------------------
 ]]
@@ -5786,13 +5786,13 @@ function ssl_timer_callback()
 end
 --[[
 ----------------------------------------------------------------------------------------------------------------------------------------
-	Description:
+	Description:	
 
-	Credit:
-	Modified:
-	function:
-	type:
-	input type:
+	Credit:			
+	Modified:		
+	function:		
+	type:			
+	input type: 	
 	returns:		none
 ----------------------------------------------------------------------------------------------------------------------------------------
 ]]
@@ -5807,13 +5807,13 @@ function start_ssl_timer()
 end
 --[[
 ----------------------------------------------------------------------------------------------------------------------------------------
-	Description:
+	Description:	
 
-	Credit:
-	Modified:
-	function:
-	type:
-	input type:
+	Credit:			
+	Modified:		
+	function:		
+	type:			
+	input type: 	
 	returns:		none
 ----------------------------------------------------------------------------------------------------------------------------------------
 ]]
@@ -5830,13 +5830,13 @@ local function ssl_check( )
 end
 --[[
 ----------------------------------------------------------------------------------------------------------------------------------------
-	Description:
+	Description:	
 
-	Credit:
-	Modified:
-	function:
-	type:
-	input type:
+	Credit:			
+	Modified:		
+	function:		
+	type:			
+	input type: 	
 	returns:		none
 ----------------------------------------------------------------------------------------------------------------------------------------
 ]]
@@ -5857,13 +5857,13 @@ local function sec_sub_1_update( )
 end
 --[[
 ----------------------------------------------------------------------------------------------------------------------------------------
-	Description:
+	Description:	
 
-	Credit:
-	Modified:
-	function:
-	type:
-	input type:
+	Credit:			
+	Modified:		
+	function:		
+	type:			
+	input type: 	
 	returns:		none
 ----------------------------------------------------------------------------------------------------------------------------------------
 ]]
@@ -5883,13 +5883,13 @@ local function sec_sub_2_update( )
 end
 --[[
 ----------------------------------------------------------------------------------------------------------------------------------------
-	Description:
+	Description:	
 
-	Credit:
-	Modified:
-	function:
-	type:
-	input type:
+	Credit:			
+	Modified:		
+	function:		
+	type:			
+	input type: 	
 	returns:		none
 ----------------------------------------------------------------------------------------------------------------------------------------
 ]]
@@ -5910,20 +5910,20 @@ local function sec_sub_3_update( )
 end
 --[[
 ----------------------------------------------------------------------------------------------------------------------------------------
-	Description:
+	Description:	
 
-	Credit:
-	Modified:
-	function:
-	type:
-	input type:
+	Credit:			
+	Modified:		
+	function:		
+	type:			
+	input type: 	
 	returns:		none
 ----------------------------------------------------------------------------------------------------------------------------------------
 ]]
 local function hotkey_send_sec_add_1( pressed )
     debug_log( 'hotkey_send_sec_add_1(' .. pre_dump(pressed) .. ') -- function variable names:  pressed ' )
 	--[[
-		For hotkeys: This is called on key down & key up. A bool check:
+		For hotkeys: This is called on key down & key up. A bool check: 
 
 		pressed = true (key down)
 		pressed = false (key up)
@@ -5941,20 +5941,20 @@ local function hotkey_send_sec_add_1( pressed )
 end
 --[[
 ----------------------------------------------------------------------------------------------------------------------------------------
-	Description:
+	Description:	
 
-	Credit:
-	Modified:
-	function:
-	type:
-	input type:
+	Credit:			
+	Modified:		
+	function:		
+	type:			
+	input type: 	
 	returns:		none
 ----------------------------------------------------------------------------------------------------------------------------------------
 ]]
 local function hotkey_send_sec_add_2( pressed )
     debug_log( 'hotkey_send_sec_add_2(' .. pre_dump(pressed) .. ') -- function variable names:  pressed ' )
 	--[[
-		For hotkeys: This is called on key down & key up. A bool check:
+		For hotkeys: This is called on key down & key up. A bool check: 
 
 		pressed = true (key down)
 		pressed = false (key up)
@@ -5972,20 +5972,20 @@ local function hotkey_send_sec_add_2( pressed )
 end
 --[[
 ----------------------------------------------------------------------------------------------------------------------------------------
-	Description:
+	Description:	
 
-	Credit:
-	Modified:
-	function:
-	type:
-	input type:
+	Credit:			
+	Modified:		
+	function:		
+	type:			
+	input type: 	
 	returns:		none
 ----------------------------------------------------------------------------------------------------------------------------------------
 ]]
 local function hotkey_send_sec_add_3( pressed )
     debug_log( 'hotkey_send_sec_add_3(' .. pre_dump(pressed) .. ') -- function variable names:  pressed ' )
 	--[[
-		For hotkeys: This is called on key down & key up. A bool check:
+		For hotkeys: This is called on key down & key up. A bool check: 
 
 		pressed = true (key down)
 		pressed = false (key up)
@@ -6003,20 +6003,20 @@ local function hotkey_send_sec_add_3( pressed )
 end
 --[[
 ----------------------------------------------------------------------------------------------------------------------------------------
-	Description:
+	Description:	
 
-	Credit:
-	Modified:
-	function:
-	type:
-	input type:
+	Credit:			
+	Modified:		
+	function:		
+	type:			
+	input type: 	
 	returns:		none
 ----------------------------------------------------------------------------------------------------------------------------------------
 ]]
 local function hotkey_send_sec_sub_1( pressed )
     debug_log( 'hotkey_send_sec_sub_1(' .. pre_dump(pressed) .. ') -- function variable names:  pressed ' )
 	--[[
-		For hotkeys: This is called on key down & key up. A bool check:
+		For hotkeys: This is called on key down & key up. A bool check: 
 
 		pressed = true (key down)
 		pressed = false (key up)
@@ -6034,20 +6034,20 @@ local function hotkey_send_sec_sub_1( pressed )
 end
 --[[
 ----------------------------------------------------------------------------------------------------------------------------------------
-	Description:
+	Description:	
 
-	Credit:
-	Modified:
-	function:
-	type:
-	input type:
+	Credit:			
+	Modified:		
+	function:		
+	type:			
+	input type: 	
 	returns:		none
 ----------------------------------------------------------------------------------------------------------------------------------------
 ]]
 local function hotkey_send_sec_sub_2( pressed )
     debug_log( 'hotkey_send_sec_sub_2(' .. pre_dump(pressed) .. ') -- function variable names:  pressed ' )
 	--[[
-		For hotkeys: This is called on key down & key up. A bool check:
+		For hotkeys: This is called on key down & key up. A bool check: 
 
 		pressed = true (key down)
 		pressed = false (key up)
@@ -6065,20 +6065,20 @@ local function hotkey_send_sec_sub_2( pressed )
 end
 --[[
 ----------------------------------------------------------------------------------------------------------------------------------------
-	Description:
+	Description:	
 
-	Credit:
-	Modified:
-	function:
-	type:
-	input type:
+	Credit:			
+	Modified:		
+	function:		
+	type:			
+	input type: 	
 	returns:		none
 ----------------------------------------------------------------------------------------------------------------------------------------
 ]]
 local function hotkey_send_sec_sub_3( pressed )
     debug_log( 'hotkey_send_sec_sub_3(' .. pre_dump(pressed) .. ') -- function variable names:  pressed ' )
 	--[[
-		For hotkeys: This is called on key down & key up. A bool check:
+		For hotkeys: This is called on key down & key up. A bool check: 
 
 		pressed = true (key down)
 		pressed = false (key up)
@@ -6096,13 +6096,13 @@ local function hotkey_send_sec_sub_3( pressed )
 end
 --[[
 ----------------------------------------------------------------------------------------------------------------------------------------
-	Description:
+	Description:	
 
-	Credit:
-	Modified:
+	Credit:			
+	Modified:		
 	function:		reset timer
-	type:
-	input type:
+	type:			
+	input type: 	
 	returns:		none
 ----------------------------------------------------------------------------------------------------------------------------------------
 ]]
@@ -6111,7 +6111,7 @@ local function reset( pressed )
 	if not script_ready then return end
 	reset_activated = true; -- notify timer settings a reset call is in process
 	--[[
-		For hotkeys: This is called on key down & key up. A bool check:
+		For hotkeys: This is called on key down & key up. A bool check: 
 
 		pressed = true (key down)
 		pressed = false (key up)
@@ -6246,11 +6246,11 @@ end
 ----------------------------------------------------------------------------------------------------------------------------------------
 	Description:	Called when a source is activated/deactivated
 
-	Credit:
-	Modified:
-	function:
-	type:
-	input type:
+	Credit:			
+	Modified:		
+	function:		
+	type:			
+	input type: 	
 	returns:
 ----------------------------------------------------------------------------------------------------------------------------------------
 ]]
@@ -6286,11 +6286,11 @@ end
 ----------------------------------------------------------------------------------------------------------------------------------------
 	Description:	Called when a source is activated/deactivated
 
-	Credit:
-	Modified:
-	function:
-	type:
-	input type:
+	Credit:			
+	Modified:		
+	function:		
+	type:			
+	input type: 	
 	returns:
 ----------------------------------------------------------------------------------------------------------------------------------------
 ]]
@@ -6352,20 +6352,20 @@ local function activate_signal( cd, connected )
 end
 --[[
 ----------------------------------------------------------------------------------------------------------------------------------------
-	Description:
+	Description:	
 
-	Credit:
-	Modified:
+	Credit:			
+	Modified:		
 	function:		reset timer
-	type:
-	input type:
+	type:			
+	input type: 	
 	returns:		none
 ----------------------------------------------------------------------------------------------------------------------------------------
 ]]
 local function activate_reset( pressed )
     debug_log( 'activate_reset(' .. pre_dump(pressed) .. ') -- function variable names:  pressed ' )
 	--[[
-		For hotkeys: This is called on key down & key up. A bool check:
+		For hotkeys: This is called on key down & key up. A bool check: 
 
 		pressed = true (key down)
 		pressed = false (key up)
@@ -6383,20 +6383,20 @@ local function activate_reset( pressed )
 end
 --[[
 ----------------------------------------------------------------------------------------------------------------------------------------
-	Description:
+	Description:	
 
-	Credit:
-	Modified:
+	Credit:			
+	Modified:		
 	function:		reset timer
-	type:
-	input type:
+	type:			
+	input type: 	
 	returns:		none
 ----------------------------------------------------------------------------------------------------------------------------------------
 ]]
 local function hotkey_send_reset( pressed )
     debug_log( 'hotkey_send_reset(' .. pre_dump(pressed) .. ') -- function variable names:  pressed ' )
 	--[[
-		For hotkeys: This is called on key down & key up. A bool check:
+		For hotkeys: This is called on key down & key up. A bool check: 
 
 		pressed = true (key down)
 		pressed = false (key up)
@@ -6416,10 +6416,10 @@ end
 ----------------------------------------------------------------------------------------------------------------------------------------
 	Description:	Set the titles / labels of the Start / Pause Button
 
-	Credit:
-	Modified:
+	Credit:			
+	Modified:		
 	function:		Update start/puase button label
-	type:
+	type:			
 	input type: 	mode, timer_active
 	returns:		props
 ----------------------------------------------------------------------------------------------------------------------------------------
@@ -6481,11 +6481,11 @@ end
 ----------------------------------------------------------------------------------------------------------------------------------------
 	Description:	Callback for button press
 
-	Credit:
-	Modified:
-	function:
-	type:
-	input type:
+	Credit:			
+	Modified:		
+	function:		
+	type:			
+	input type: 	
 	returns:
 ----------------------------------------------------------------------------------------------------------------------------------------
 ]]
@@ -6499,11 +6499,11 @@ end
 ----------------------------------------------------------------------------------------------------------------------------------------
 	Description:	Callback for button press
 
-	Credit:
-	Modified:
-	function:
-	type:
-	input type:
+	Credit:			
+	Modified:		
+	function:		
+	type:			
+	input type: 	
 	returns:
 ----------------------------------------------------------------------------------------------------------------------------------------
 ]]
@@ -6517,11 +6517,11 @@ end
 ----------------------------------------------------------------------------------------------------------------------------------------
 	Description:	Callback for button press
 
-	Credit:
-	Modified:
-	function:
-	type:
-	input type:
+	Credit:			
+	Modified:		
+	function:		
+	type:			
+	input type: 	
 	returns:
 ----------------------------------------------------------------------------------------------------------------------------------------
 ]]
@@ -6534,11 +6534,11 @@ end
 ----------------------------------------------------------------------------------------------------------------------------------------
 	Description:	Callback for button press
 
-	Credit:
-	Modified:
-	function:
-	type:
-	input type:
+	Credit:			
+	Modified:		
+	function:		
+	type:			
+	input type: 	
 	returns:
 ----------------------------------------------------------------------------------------------------------------------------------------
 ]]
@@ -6551,11 +6551,11 @@ end
 ----------------------------------------------------------------------------------------------------------------------------------------
 	Description:	Callback for button press
 
-	Credit:
-	Modified:
-	function:
-	type:
-	input type:
+	Credit:			
+	Modified:		
+	function:		
+	type:			
+	input type: 	
 	returns:
 ----------------------------------------------------------------------------------------------------------------------------------------
 ]]
@@ -6568,11 +6568,11 @@ end
 ----------------------------------------------------------------------------------------------------------------------------------------
 	Description:	Callback for button press
 
-	Credit:
-	Modified:
-	function:
-	type:
-	input type:
+	Credit:			
+	Modified:		
+	function:		
+	type:			
+	input type: 	
 	returns:
 ----------------------------------------------------------------------------------------------------------------------------------------
 ]]
@@ -6585,11 +6585,11 @@ end
 ----------------------------------------------------------------------------------------------------------------------------------------
 	Description:	Callback for button press
 
-	Credit:
-	Modified:
-	function:
-	type:
-	input type:
+	Credit:			
+	Modified:		
+	function:		
+	type:			
+	input type: 	
 	returns:
 ----------------------------------------------------------------------------------------------------------------------------------------
 ]]
@@ -6602,11 +6602,11 @@ end
 ----------------------------------------------------------------------------------------------------------------------------------------
 	Description:	Callback for button press
 
-	Credit:
-	Modified:
-	function:
-	type:
-	input type:
+	Credit:			
+	Modified:		
+	function:		
+	type:			
+	input type: 	
 	returns:
 ----------------------------------------------------------------------------------------------------------------------------------------
 ]]
@@ -6619,11 +6619,11 @@ end
 ----------------------------------------------------------------------------------------------------------------------------------------
 	Description:	Usually called by a button or hotkey press
 
-	Credit:
-	Modified:
-	function:
-	type:
-	input type:
+	Credit:			
+	Modified:		
+	function:		
+	type:			
+	input type: 	
 	returns:
 ----------------------------------------------------------------------------------------------------------------------------------------
 ]]
@@ -6638,11 +6638,11 @@ end
 ----------------------------------------------------------------------------------------------------------------------------------------
 	Description:	Callback for button press
 
-	Credit:
-	Modified:
-	function:
-	type:
-	input type:
+	Credit:			
+	Modified:		
+	function:		
+	type:			
+	input type: 	
 	returns:
 ----------------------------------------------------------------------------------------------------------------------------------------
 ]]
@@ -6655,11 +6655,11 @@ end
 ----------------------------------------------------------------------------------------------------------------------------------------
 	Description:	Callback on property modification
 
-	Credit:
-	Modified:
+	Credit:			
+	Modified:		
 	function:		Callback for Settings import
-	type:
-	input type:
+	type:			
+	input type: 	
 	returns:
 ----------------------------------------------------------------------------------------------------------------------------------------
 ]]
@@ -6685,11 +6685,11 @@ end
 ----------------------------------------------------------------------------------------------------------------------------------------
 	Description:	Callback for button press
 
-	Credit:
-	Modified:
-	function:
-	type:
-	input type:
+	Credit:			
+	Modified:		
+	function:		
+	type:			
+	input type: 	
 	returns:
 ----------------------------------------------------------------------------------------------------------------------------------------
 ]]
@@ -6703,11 +6703,11 @@ end
 ----------------------------------------------------------------------------------------------------------------------------------------
 	Description:	Callback for button press
 
-	Credit:
-	Modified:
-	function:
-	type:
-	input type:
+	Credit:			
+	Modified:		
+	function:		
+	type:			
+	input type: 	
 	returns:
 ----------------------------------------------------------------------------------------------------------------------------------------
 ]]
@@ -6723,11 +6723,11 @@ end
 ----------------------------------------------------------------------------------------------------------------------------------------
 	Description:	Callback for button press
 
-	Credit:
-	Modified:
-	function:
-	type:
-	input type:
+	Credit:			
+	Modified:		
+	function:		
+	type:			
+	input type: 	
 	returns:
 ----------------------------------------------------------------------------------------------------------------------------------------
 ]]
@@ -6740,11 +6740,11 @@ end
 ----------------------------------------------------------------------------------------------------------------------------------------
 	Description:	Usually called by a button or hotkey press
 
-	Credit:
-	Modified:
-	function:
-	type:
-	input type:
+	Credit:			
+	Modified:		
+	function:		
+	type:			
+	input type: 	
 	returns:
 ----------------------------------------------------------------------------------------------------------------------------------------
 ]]
@@ -6762,20 +6762,20 @@ local function split_time( pressed )
 end
 --[[
 ----------------------------------------------------------------------------------------------------------------------------------------
-	Description:
+	Description:	
 
-	Credit:
-	Modified:
+	Credit:			
+	Modified:		
 	function:		reset timer
-	type:
-	input type:
+	type:			
+	input type: 	
 	returns:		none
 ----------------------------------------------------------------------------------------------------------------------------------------
 ]]
 local function hotkey_send_split( pressed )
     debug_log( 'hotkey_send_split(' .. pre_dump(pressed) .. ') -- function variable names:  pressed ' )
 	--[[
-		For hotkeys: This is called on key down & key up. A bool check:
+		For hotkeys: This is called on key down & key up. A bool check: 
 
 		pressed = true (key down)
 		pressed = false (key up)
@@ -6795,11 +6795,11 @@ end
 ----------------------------------------------------------------------------------------------------------------------------------------
 	Description:	Callback for button press
 
-	Credit:
-	Modified:
-	function:
-	type:
-	input type:
+	Credit:			
+	Modified:		
+	function:		
+	type:			
+	input type: 	
 	returns:
 ----------------------------------------------------------------------------------------------------------------------------------------
 ]]
@@ -6810,13 +6810,13 @@ local function split_button_clicked( props, p )
 end
 --[[
 ----------------------------------------------------------------------------------------------------------------------------------------
-	Description:
+	Description:	
 
-	Credit:
-	Modified:
-	function:
-	type:
-	input type:
+	Credit:			
+	Modified:		
+	function:		
+	type:			
+	input type: 	
 	returns:
 ----------------------------------------------------------------------------------------------------------------------------------------
 ]]
@@ -6972,13 +6972,13 @@ local function load_settings_globals( settings )
 end
 --[[
 ----------------------------------------------------------------------------------------------------------------------------------------
-	Description:
+	Description:	
 
-	Credit:
-	Modified:
-	function:
-	type:
-	input type:
+	Credit:			
+	Modified:		
+	function:		
+	type:			
+	input type: 	
 	returns:
 ----------------------------------------------------------------------------------------------------------------------------------------
 ]]
@@ -7017,11 +7017,11 @@ end
 					we use this to get a signal handler for a specific source once
 					it is loaded to ensure it is connected when OBS starts up
 
-	Credit:
-	Modified:
-	function:
-	type:
-	input type:
+	Credit:			
+	Modified:		
+	function:		
+	type:			
+	input type: 	
 	returns:
 ----------------------------------------------------------------------------------------------------------------------------------------
 ]]
@@ -7077,13 +7077,13 @@ local function loaded( cd )
 end
 --[[
 ----------------------------------------------------------------------------------------------------------------------------------------
-	Description:
+	Description:	
 
-	Credit:
-	Modified:
-	function:
-	type:
-	input type:
+	Credit:			
+	Modified:		
+	function:		
+	type:			
+	input type: 	
 	returns:
 ----------------------------------------------------------------------------------------------------------------------------------------
 ]]
@@ -7093,13 +7093,13 @@ local function source_show( cd )
 end
 --[[
 ----------------------------------------------------------------------------------------------------------------------------------------
-	Description:
+	Description:	
 
-	Credit:
-	Modified:
-	function:
-	type:
-	input type:
+	Credit:			
+	Modified:		
+	function:		
+	type:			
+	input type: 	
 	returns:
 ----------------------------------------------------------------------------------------------------------------------------------------
 ]]
@@ -7109,13 +7109,13 @@ local function source_hide( cd )
 end
 --[[
 ----------------------------------------------------------------------------------------------------------------------------------------
-	Description:
+	Description:	
 
-	Credit:
-	Modified:
-	function:
-	type:
-	input type:
+	Credit:			
+	Modified:		
+	function:		
+	type:			
+	input type: 	
 	returns:
 ----------------------------------------------------------------------------------------------------------------------------------------
 ]]
@@ -7125,13 +7125,13 @@ local function source_activated( cd )
 end
 --[[
 ----------------------------------------------------------------------------------------------------------------------------------------
-	Description:
+	Description:	
 
-	Credit:
-	Modified:
-	function:
-	type:
-	input type:
+	Credit:			
+	Modified:		
+	function:		
+	type:			
+	input type: 	
 	returns:
 ----------------------------------------------------------------------------------------------------------------------------------------
 ]]
@@ -7141,13 +7141,13 @@ local function source_deactivated( cd )
 end
 --[[
 ----------------------------------------------------------------------------------------------------------------------------------------
-	Description:
+	Description:	
 
-	Credit:
-	Modified:
-	function:
-	type:
-	input type:
+	Credit:			
+	Modified:		
+	function:		
+	type:			
+	input type: 	
 	returns:
 ----------------------------------------------------------------------------------------------------------------------------------------
 ]]
@@ -7157,13 +7157,13 @@ local function timer_activation_source_activated( cd )
 end
 --[[
 ----------------------------------------------------------------------------------------------------------------------------------------
-	Description:
+	Description:	
 
-	Credit:
-	Modified:
-	function:
-	type:
-	input type:
+	Credit:			
+	Modified:		
+	function:		
+	type:			
+	input type: 	
 	returns:
 ----------------------------------------------------------------------------------------------------------------------------------------
 ]]
@@ -7176,11 +7176,11 @@ end
 ----------------------------------------------------------------------------------------------------------------------------------------
 	Description:	Called when a source is activated/deactivated
 
-	Credit:
-	Modified:
-	function:
-	type:
-	input type:
+	Credit:			
+	Modified:		
+	function:		
+	type:			
+	input type: 	
 	returns:
 ----------------------------------------------------------------------------------------------------------------------------------------
 ]]
@@ -7210,13 +7210,13 @@ local function timer_activation_source_media( cd )
 end
 --[[
 ----------------------------------------------------------------------------------------------------------------------------------------
-	Description:
+	Description:	
 
-	Credit:
-	Modified:
-	function:
-	type:
-	input type:
+	Credit:			
+	Modified:		
+	function:		
+	type:			
+	input type: 	
 	returns:
 ----------------------------------------------------------------------------------------------------------------------------------------
 ]]
@@ -7226,13 +7226,13 @@ local function timer_activation_source_media_started( cd )
 end
 --[[
 ----------------------------------------------------------------------------------------------------------------------------------------
-	Description:
+	Description:	
 
-	Credit:
-	Modified:
-	function:
-	type:
-	input type:
+	Credit:			
+	Modified:		
+	function:		
+	type:			
+	input type: 	
 	returns:
 ----------------------------------------------------------------------------------------------------------------------------------------
 ]]
@@ -7266,9 +7266,9 @@ end
 ----------------------------------------------------------------------------------------------------------------------------------------
 	Description:	Callback on property modification
 
-	Credit:
-	Modified:
-	function:
+	Credit:			
+	Modified:		
+	function:		
 	type:			property event
 	input type: 	props, property, settings
 	returns: 		true to update properties
@@ -7897,13 +7897,13 @@ local function property_onchange( props, property, settings )
 end
 --[[
 ----------------------------------------------------------------------------------------------------------------------------------------
-	Description:
-	Credit:
-	Modified:
-	function:
-	type:
-	input type:
-	returns:
+	Description:	
+	Credit:			
+	Modified:		
+	function:		
+	type:			
+	input type: 	
+	returns:		
 ----------------------------------------------------------------------------------------------------------------------------------------
 ]]
 local function timer_expire_event_cycle_source_list( source_type )
@@ -7959,13 +7959,13 @@ local function timer_expire_event_cycle_source_list( source_type )
 end
 --[[
 ----------------------------------------------------------------------------------------------------------------------------------------
-	Description:
+	Description:	
 
-	Credit:
-	Modified:
-	function:
-	type:
-	input type:
+	Credit:			
+	Modified:		
+	function:		
+	type:			
+	input type: 	
 	returns:
 ----------------------------------------------------------------------------------------------------------------------------------------
 ]]
@@ -7979,11 +7979,11 @@ end
 ----------------------------------------------------------------------------------------------------------------------------------------
 	Description:	Only used in Count Down mode
 
-	Credit:
-	Modified:
-	function:
-	type:
-	input type:
+	Credit:			
+	Modified:		
+	function:		
+	type:			
+	input type: 	
 	returns:
 ----------------------------------------------------------------------------------------------------------------------------------------
 ]]
@@ -8112,8 +8112,8 @@ end
 	Description:	A function named script_properties defines the properties that the user
 					can change for the entire script module itself. The stacking order of properties detirmine
 					the order and position of the items on the UI
-	Credit:
-	Modified:
+	Credit:			
+	Modified:		
 	function:		Creates UI
 	type:			Properties
 	input type: 	none
@@ -9255,11 +9255,11 @@ end
 ----------------------------------------------------------------------------------------------------------------------------------------
 	Description:	We use this to keep track of what text type sources was assigned/selected in properties
 
-	Credit:
-	Modified:
+	Credit:			
+	Modified:		
 	function:		Called upon settings initialization and modification
-	type:
-	input type:
+	type:			
+	input type: 	
 
 	returns:
 ----------------------------------------------------------------------------------------------------------------------------------------
@@ -9279,11 +9279,11 @@ end
 ----------------------------------------------------------------------------------------------------------------------------------------
 	Description:	We use this to keep track of what text type sources was assigned/selected in properties
 
-	Credit:
-	Modified:
+	Credit:			
+	Modified:		
 	function:		Called upon settings initialization and modification
-	type:
-	input type:
+	type:			
+	input type: 	
 	returns:
 ----------------------------------------------------------------------------------------------------------------------------------------
 ]]
@@ -9297,11 +9297,11 @@ end
 ----------------------------------------------------------------------------------------------------------------------------------------
 	Description:	A function named script_update will be called when settings are changed
 
-	Credit:
-	Modified:
+	Credit:			
+	Modified:		
 	function:		Called upon settings initialization and modification
-	type:
-	input type:
+	type:			
+	input type: 	
 	returns:
 ----------------------------------------------------------------------------------------------------------------------------------------
 ]]
@@ -9347,8 +9347,8 @@ end
 ----------------------------------------------------------------------------------------------------------------------------------------
 	Description:	A function named script_defaults will be called to set the default settings
 
-	Credit:
-	Modified:
+	Credit:			
+	Modified:		
 	function:		Called when the script is started for the first time or when the script settings
 					is set to default
 	type:			settings
@@ -9482,8 +9482,8 @@ end
 						case, a hotkey"s save data ).  Settings set via the properties are saved
 						automatically.
 
-	Credit:
-	Modified:
+	Credit:			
+	Modified:		
 	function:			Called when script is saved
 	type:				OBS
 	input type: 		settings
@@ -9596,8 +9596,8 @@ end
 					if the script is unloaded.  So there"s no real need to manually
 					disconnect callbacks that are intended to last until the script is
 					unloaded.
-	Credit:
-	Modified:
+	Credit:			
+	Modified:		
 	function:		Called when OBS is launched or the script is added
 	type:			OBS
 	input type: 	settings
@@ -9750,8 +9750,8 @@ end
 					if the script is unloaded.  So there"s no real need to manually
 					disconnect callbacks that are intended to last until the script is
 					unloaded.
-	Credit:
-	Modified:
+	Credit:			
+	Modified:		
 	function:		Called when OBS is launched or the script is added
 	type:			OBS
 	input type: 	settings
